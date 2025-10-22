@@ -24,8 +24,7 @@ async def download_file(filename: str):
         return FileResponse(file_path, media_type="application/json", filename=filename)
     return {"error": "Archivo no encontrado"}
 
-
-# 🔹 Bloque que inicia el servidor automáticamente en Railway
+# 👇 Bloque que mantiene vivo el servidor en Railway
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 8000))
     uvicorn.run("main:app", host="0.0.0.0", port=port)
