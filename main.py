@@ -8,7 +8,6 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FOLDER = os.path.join(BASE_DIR, "data")
 os.makedirs(DATA_FOLDER, exist_ok=True)
 
-
 @app.post("/upload")
 async def upload_data(request: Request):
     data = await request.json()
